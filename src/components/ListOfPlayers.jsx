@@ -1,13 +1,13 @@
+import React from "react";
+import { PlayersData } from "../PlayersData";
 import { Player } from "./Player";
 
-import {playerData} from '../playerData'
-
-export const ListOfPlayers = ()=> {
-  
-   
+export const ListOfPlayers = () => {
   return (
-    {playerData.map(()=>{
-      
-    })}
-  )
-}
+    <>
+      {PlayersData.map((player) => (
+        <Player key={player.id} playerName={player.name} />
+      ))}
+    </>
+  );
+};

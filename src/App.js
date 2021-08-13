@@ -1,17 +1,19 @@
 import React from "react";
 import "./styles.css";
 import { Header } from "./components/Header";
-import { Player } from "./components/Player";
 import { PlayersData } from "./PlayersData";
+import { ListOfPlayers } from "./components/ListOfPlayers";
 
 export default class App extends React.Component {
+  state = {
+    players: PlayersData
+  };
+
   render() {
     return (
       <>
-        <Header title="Scoreboard" totalPlayers={PlayersData.length} />
-        {PlayersData.map((player) => (
-          <Player key={player.id} playerName={player.name} />
-        ))}
+        <Header title="Scoreboard" totalPlayers={this.state.players.length} />
+        <ListOfPlayers />
       </>
     );
   }

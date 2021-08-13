@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export const Counter = ({ playerScore, incrementClick }) => {
+export const Counter = () => {
   const [scoreValue, setScoreValue] = useState(0);
 
   return (

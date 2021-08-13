@@ -1,9 +1,14 @@
 import { Counter } from "./Counter";
 
-export const Player = ({ playerName, playerScore, incrementClick }) => {
+export const Player = ({ id, playerName, removePlayer }) => {
   return (
     <div className="player">
-      <span className="player-name">{playerName}</span>
+      <span className="player-name">
+        <button className="remove-player" onClick={() => removePlayer(id)}>
+          ✖
+        </button>
+        {playerName}
+      </span>
       <Counter />
     </div>
   );

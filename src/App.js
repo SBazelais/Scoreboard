@@ -9,11 +9,22 @@ export default class App extends React.Component {
     players: PlayersData
   };
 
+  handleRemovePlayer = (id) => {
+    this.setState((prevState) => {
+      return {
+        players: prevState.players.filter((player) => player.id !== id)
+      };
+    });
+  };
+
   render() {
     return (
       <>
         <Header title="Scoreboard" totalPlayers={this.state.players.length} />
-        <ListOfPlayers />
+        <ListOfPlayers
+          players={this.state.players}
+          removePlayer={this.handleRemovePlayer}
+        />
       </>
     );
   }

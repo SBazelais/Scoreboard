@@ -1,12 +1,16 @@
 import React from "react";
-import { PlayersData } from "../PlayersData";
 import { Player } from "./Player";
 
-export const ListOfPlayers = () => {
+export const ListOfPlayers = ({ players, removePlayer }) => {
   return (
     <>
-      {PlayersData.map((player) => (
-        <Player key={player.id} playerName={player.name} />
+      {players.map((player) => (
+        <Player
+          key={player.id}
+          id={player.id}
+          playerName={player.name}
+          removePlayer={removePlayer}
+        />
       ))}
     </>
   );

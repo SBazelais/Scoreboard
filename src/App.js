@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles.css";
 import { Header } from "./components/Header";
-import { PlayersData } from "./PlayersData";
+import { PlayersData } from "./database/PlayersData";
 import { ListOfPlayers } from "./components/ListOfPlayers";
 
 export default class App extends React.Component {

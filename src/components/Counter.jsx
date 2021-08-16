@@ -1,20 +1,17 @@
-import React, { useState } from "react";
-
-export const Counter = () => {
-  const [scoreValue, setScoreValue] = useState(0);
-
+export const Counter = ({ handleScoreChange, index, playerScore }) => {
+  console.log(playerScore);
   return (
     <div className="counter">
       <button
         className="counter-action decrement"
-        onClick={() => setScoreValue(scoreValue - 1)}
+        onClick={() => handleScoreChange(index, -1)}
       >
         -
       </button>
-      <span className="counter-score">{scoreValue}</span>
+      <span className="counter-score">{playerScore}</span>
       <button
         className="counter-action increment"
-        onClick={() => setScoreValue(scoreValue + 1)}
+        onClick={() => handleScoreChange(index, +1)}
       >
         +
       </button>

@@ -1,5 +1,4 @@
 export const Counter = ({ handleScoreChange, index, playerScore }) => {
-  console.log(playerScore);
   return (
     <div className="counter">
       <button

@@ -10,6 +10,21 @@ export default class App extends React.Component {
     players: PlayersData
   };
 
+  prevPlayerId = 8;
+
+  handleAddPlayer = (name) => {
+    this.setState({
+      players: [
+        ...this.state.players,
+        {
+          name,
+          score: 0,
+          id: (this.prevPlayerId += 1)
+        }
+      ]
+    });
+  };
+
   handleRemovePlayer = (id) => {
     this.setState((prevState) => {
       return {
@@ -33,7 +48,7 @@ export default class App extends React.Component {
           removePlayer={this.handleRemovePlayer}
           handleScoreChange={this.handleScoreChange}
         />
-        <AddPlayerForm />
+        <AddPlayerForm addPlayer={this.handleAddPlayer} />
       </>
     );
   }

@@ -20,7 +20,7 @@ export default class App extends React.Component {
   render() {
     return (
       <>
-        <Header title="Scoreboard" totalPlayers={this.state.players.length} />
+        <Header title="Scoreboard" players={this.state.players} />
         <ListOfPlayers
           players={this.state.players}
           removePlayer={this.handleRemovePlayer}

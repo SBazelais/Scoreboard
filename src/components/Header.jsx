@@ -1,8 +1,10 @@
-export const Header = ({ title, totalPlayers }) => {
+import Stats from "./Stats";
+
+export const Header = ({ title, players }) => {
   return (
     <header>
+      <Stats players={players} />
       <h1>{title}</h1>
-      <span className="stats">Players: {totalPlayers}</span>
     </header>
   );
 };

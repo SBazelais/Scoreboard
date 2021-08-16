@@ -1,10 +1,10 @@
 export const PlayersData = [
-  { name: "Steve", id: 1 },
-  { name: "Amanda", id: 2 },
-  { name: "James", id: 3 },
-  { name: "Terry", id: 4 },
-  { name: "Guil", id: 5 },
-  { name: "Treasure", id: 6 },
-  { name: "Ashley", id: 7 },
-  { name: "James", id: 8 }
+  { name: "Steve", score: 0, id: 1 },
+  { name: "Amanda", score: 0, id: 2 },
+  { name: "James", score: 0, id: 3 },
+  { name: "Terry", score: 0, id: 4 },
+  { name: "Guil", score: 0, id: 5 },
+  { name: "Treasure", score: 0, id: 6 },
+  { name: "Ashley", score: 0, id: 7 },
+  { name: "James", score: 0, id: 8 }
 ];

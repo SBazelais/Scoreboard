@@ -33,12 +33,6 @@ export default class App extends React.Component {
     });
   };
 
-  handleScoreChange = (index, scoreChange) => {
-    this.setState((prevState) => ({
-      score: (prevState.players[index].score += scoreChange)
-    }));
-  };
-
   render() {
     return (
       <>
@@ -46,7 +40,6 @@ export default class App extends React.Component {
         <ListOfPlayers
           players={this.state.players}
           removePlayer={this.handleRemovePlayer}
-          handleScoreChange={this.handleScoreChange}
         />
         <AddPlayerForm addPlayer={this.handleAddPlayer} />
       </>

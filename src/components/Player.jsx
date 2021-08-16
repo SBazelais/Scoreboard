@@ -1,13 +1,6 @@
 import { Counter } from "./Counter";
 
-export const Player = ({
-  id,
-  playerName,
-  removePlayer,
-  handleScoreChange,
-  index,
-  playerScore
-}) => {
+export const Player = ({ id, playerName, removePlayer, playerScore }) => {
   return (
     <div className="player">
       <span className="player-name">
@@ -16,11 +9,7 @@ export const Player = ({
         </button>
         {playerName}
       </span>
-      <Counter
-        handleScoreChange={handleScoreChange}
-        index={index}
-        playerScore={playerScore}
-      />
+      <Counter playerScore={playerScore} />
     </div>
   );
 };
